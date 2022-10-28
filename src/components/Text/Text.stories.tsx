@@ -1,10 +1,5 @@
-import {
-  ComponentStory,
-  ComponentMeta,
-  StoryObj,
-  Meta,
-} from '@storybook/react';
-import { Text, TextProps } from '.';
+import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { Text } from '.';
 
 export default {
   title: 'Components/Text',

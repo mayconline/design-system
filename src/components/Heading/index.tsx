@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
 import { Slot } from '@radix-ui/react-slot';
+import { clsx } from 'clsx';
 
 export interface HeadingProps {
   size?: 'sm' | 'md' | 'lg';
@@ -18,7 +19,15 @@ export function Heading({
 
   return (
     <Component
-      className={`text-gray-100 font-bold font-sans text-${size} ${className}`}
+      className={clsx(
+        'text-gray-100 font-bold font-sans',
+        {
+          'text-lg': size === 'sm',
+          'text-xl': size === 'md',
+          'text-2xl': size === 'lg',
+        },
+        className
+      )}
     >
       {children}
     </Component>

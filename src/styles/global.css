@@ -2,3 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 @tailwind variants;
+
+@layer components {
+  .btn-primary {
+    @apply bg-cyan-500  text-gray-800  hover:bg-cyan-300 ring-white;
+  }
+
+  .btn-secondary {
+    @apply bg-gray-800  text-cyan-500  hover:opacity-75 ring-black;
+  }
+}

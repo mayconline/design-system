@@ -102,7 +102,12 @@ function App() {
           </Text>
         </label>
 
-        <Button type="submit" className="mt-4" onClick={handleSubmit}>
+        <Button
+          type="submit"
+          kind="primary"
+          className="mt-4"
+          onClick={handleSubmit}
+        >
           Entrar na plataforma
         </Button>
       </form>
