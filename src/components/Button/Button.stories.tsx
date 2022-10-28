@@ -13,7 +13,6 @@ export default {
       control: {
         type: 'inline-radio',
       },
-      defaultValue: 'primary',
     },
   },
 } as ComponentMeta<typeof Button>;
