@@ -3,8 +3,17 @@ import { initialize, mswDecorator } from 'msw-storybook-addon';
 
 import '../src/styles/global.css';
 
+const isDevelopment = process.env.NODE_ENV === 'development';
+
+console.log(process.env.NODE_ENV);
+
 initialize({
   onUnhandledRequest: 'bypass',
+  ...(!isDevelopment && {
+    serviceWorker: {
+      url: '/design-system/mockServiceWorker.js',
+    },
+  }),
 });
 
 export const decorators = [mswDecorator];
